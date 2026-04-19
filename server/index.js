@@ -4,10 +4,10 @@ const port = process.env.PORT || 3000;
 const cors = require("cors");
 const sql = require('mssql');
 const config = {
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  server: process.env.DB_SERVER,
-  database: process.env.DB_NAME,
+  user: process.env.DB_USER  || "webserver1",
+  password: process.env.DB_PASSWORD || "cisco",
+  server: process.env.DB_SERVER || "localhost",
+  database: process.env.DB_NAME || "koncorocny_projekt_faktury",
   options: { encrypt: true, trustServerCertificate: true }
 };
 
